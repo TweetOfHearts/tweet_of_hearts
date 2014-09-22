@@ -1,0 +1,10 @@
+<div class="container" id="left-prev">
+  <fieldset>
+    <legend>Previous Tweets</legend>
+    <% Tweet.where(user_id: @target_user.id).each do |tweet| %> <!-- change Tweet.all to Tweets by user-->
+    <ul>
+      <li><i class="fa fa-heart-o fa-lg"></i><%= tweet.content %></li>
+    </ul>
+    <% end %>
+
+  </fieldset>

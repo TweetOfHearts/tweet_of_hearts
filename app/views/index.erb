@@ -1,0 +1,31 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<header>
+  <h1 id="first">Twitter <i class="fa fa-heart"></i></h1></header>
+  <div class="container" id="first-con">
+    <fieldset>
+      <legend>Welcome to Twitter</legend>
+    <% if flash[:error]%>
+    <%= flash[:error] %>
+    <% end %>
+    <form action="/sessions" method="post">
+      <h3>Login</h3>
+      <label class="label" for="email">Email:</label>
+      <input type="text" name="email" placeholder="email">
+      <label class="label" for="password">Password:</label>
+      <input type="password" name="password" placeholder="password">
+      <input class="submit" type="submit" value="Submit">
+    </form>
+    <br>
+    <form action="/users" method="post">
+      <h3>Sign up</h3>
+      <label class="label" for="email">Email:</label>
+      <input type="text" name="email" placeholder="email">
+      <label class="label" for="first_name">First name:</label>
+      <input type="text" name="first_name" placeholder="First name">
+      <label class="label" for="password">Password:</label>
+      <input type="password" name="password" placeholder="password">
+      <input class="submit" type="submit" value="Submit">
+    </form>
+    </fieldset>
+  </div>
+
